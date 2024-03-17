@@ -10,6 +10,7 @@
   /* HEADER */ 
   --ihc-header-background-color: rgb(191, 234, 191);
   /* GAP */
+  --ihc-gap-xs: 0.3rem;
   --ihc-gap-s: 1rem;
   --ihc-gap-m: 1.5rem;
   /* PADDING */
@@ -227,7 +228,18 @@ footer {
 }
 /* MEDIA QUERY'S */
 
-@media (min-width: 478px) {
+@media (max-width: 478px) {
+  #TemasBtn {
+    display:none;
+  }
+  .imgProfile{
+    display:none;
+  }
+  header{
+    gap: var(--ihc-gap-xs);
+    margin:1px;
+    padding:var(--ihc-padding-s) var(--ihc-padding-s)
+  }
 }
 
 @media screen and (min-width: 576px) {
