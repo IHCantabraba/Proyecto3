@@ -44,7 +44,9 @@ li {
   background-color: var(--ihc-background-color-dark);
   color: var(--ihc-secondary-color);
 }
-
+.oscuro_theme{
+  background-color: rgb(105, 104, 104) ;
+}
 /* HEADER */
 
 header {
@@ -57,14 +59,25 @@ header {
   background-color: var(--ihc-header-background-color);
   margin-bottom: 5px;
 }
-header > h1 {
-  background-color: var(--ihc-logocolor);
+#searchBtn{
+  background-color: rgb(119, 180, 119);
+
+}
+#searchBtn:hover{
+  scale: 1.1;
+  background-color: rgb(236, 180, 74);
+}
+
+#TemasBtn:hover{ 
+  scale: 1.1;
+  
+}
+#logo-buton {
   width: var(--ihc-buttons-width-default);
   height: var(--ihc-buttons-height-default);
   border-radius: var(--ihc-BtnRound-BorderRadius);
-  font-size: 1.5rem;
   text-align: center;
-  color: var(--ihc-secondary-color);
+  /* cursor: pointer; */
 }
 header > input {
   height: var(--ihc-buttons-height-default);
@@ -75,20 +88,21 @@ header > input {
   background: url(https://res.cloudinary.com/df7b0dj9r/image/upload/c_scale,w_25/v1710671225/lupa_wsgqx9.png) no-repeat 3px 5px
 }
 header > button {
-  height: var(--ihc-buttons-height-default);
-  width: var(--ihc-buttons-width-default);
+  min-height: var(--ihc-buttons-height-default);
+  min-width: var(--ihc-buttons-width-default);
   border-radius: var(--ihc-BtnRound-BorderRadius);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-header button:hover {
+/* header button:hover {
   background-color: var(--ihc-secondary-color);
-}
+} */
 header > img {
-  height: var(--ihc-buttons-height-smaller);
-  width: var(--ihc-buttons-height-smaller);
+  min-height: var(--ihc-buttons-height-smaller);
+  min-width: var(--ihc-buttons-height-smaller);
   background-color:white;
 }
 header .icon {
@@ -98,6 +112,7 @@ header .imgProfile {
   border-radius: var(--ihc-BtnRound-BorderRadius);
   height: var(--ihc-buttons-height-default);
   width: var(--ihc-buttons-width-default);
+  background-color: rgb(180, 177, 177);
 
 }
 header .imgProfile:hover {
@@ -111,10 +126,16 @@ footer {
   align-items: center;
   justify-content: center;
   height: 15vh;
+  padding: var(--ihc-padding-l);
 }
 
 /* GALERIA */
-
+.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:var(--ihc-padding-l)
+}
 .galeria {
   padding: var(--ihc-padding-none) var(--ihc-padding-m);
   display: grid;
@@ -193,6 +214,10 @@ footer {
   border-radius: var(--ihc-BtnRound-BorderRadius);
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+p{
+  font-weight: bold;
   align-items: center;
 }
 
