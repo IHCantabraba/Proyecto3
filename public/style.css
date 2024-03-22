@@ -7,7 +7,7 @@
   --ihc-transparency: rgba(211, 211, 211, 0.85);
   --ihc-BtnRound-BorderRadius: 50%;
   --ihc-input-BorderRadius: 2rem;
-  /* HEADER */ 
+  /* HEADER */
   --ihc-header-background-color: rgb(191, 234, 191);
   /* GAP */
   --ihc-gap-xs: 0.3rem;
@@ -21,7 +21,9 @@
   --ihc-padding-xl: 2rem;
   --ihc-buttons-height-default: 35px;
   --ihc-buttons-width-default: 35px;
-  --ihc-buttons-width-smaller: 25px:
+  --ihc-buttons-width-smaller: 25px;
+  --ihc-max-width-footer: 50px;
+  --ihc-max-width-header: 100px;
 }
 * {
   margin: 0px;
@@ -32,6 +34,11 @@ body {
   background-color: var(--ihc-background-color-white);
   color: var(--ihc-primary-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#main {
+  min-height: calc(
+    100vh - var(--ihc-max-width-footer) - var(--ihc-max-width-header)
+  );
 }
 a {
   text-decoration: none;
@@ -44,14 +51,14 @@ li {
   background-color: var(--ihc-background-color-dark);
   color: var(--ihc-secondary-color);
 }
-.oscuro_theme{
-  background-color: rgb(105, 104, 104) ;
+.oscuro_theme {
+  background-color: rgb(105, 104, 104);
 }
 /* HEADER */
 
 header {
   display: flex;
-  height: 15vh;
+  min-height: var(--ihc-max-width-header);
   align-items: center;
   justify-content: space-between;
   gap: var(--ihc-gap-m);
@@ -59,18 +66,16 @@ header {
   background-color: var(--ihc-header-background-color);
   margin-bottom: 5px;
 }
-#searchBtn{
+#searchBtn {
   background-color: rgb(119, 180, 119);
-
 }
-#searchBtn:hover{
+#searchBtn:hover {
   scale: 1.1;
   background-color: rgb(236, 180, 74);
 }
 
-#TemasBtn:hover{ 
+#TemasBtn:hover {
   scale: 1.1;
-  
 }
 #logo-buton {
   width: var(--ihc-buttons-width-default);
@@ -85,7 +90,8 @@ header > input {
   border-radius: var(--ihc-input-BorderRadius);
   padding: var(--ihc-padding-m) var(--ihc-padding-l);
   background-color: var(--ihc-secondary-color);
-  background: url(https://res.cloudinary.com/df7b0dj9r/image/upload/c_scale,w_25/v1710671225/lupa_wsgqx9.png) no-repeat 3px 5px
+  background: url(https://res.cloudinary.com/df7b0dj9r/image/upload/c_scale,w_25/v1710671225/lupa_wsgqx9.png)
+    no-repeat 3px 5px;
 }
 header > button {
   min-height: var(--ihc-buttons-height-default);
@@ -103,7 +109,7 @@ header > button {
 header > img {
   min-height: var(--ihc-buttons-height-smaller);
   min-width: var(--ihc-buttons-height-smaller);
-  background-color:white;
+  background-color: white;
 }
 header .icon {
   filter: contrast(30%);
@@ -113,7 +119,6 @@ header .imgProfile {
   height: var(--ihc-buttons-height-default);
   width: var(--ihc-buttons-width-default);
   background-color: rgb(180, 177, 177);
-
 }
 header .imgProfile:hover {
   background-color: var(--ihc-secondary-color);
@@ -127,14 +132,15 @@ footer {
   justify-content: center;
   height: 15vh;
   padding: var(--ihc-padding-l);
+  max-height: var(--ihc-max-width-footer);
 }
 
 /* GALERIA */
-.empty{
+.empty {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:var(--ihc-padding-l)
+  padding: var(--ihc-padding-l);
 }
 .galeria {
   padding: var(--ihc-padding-none) var(--ihc-padding-m);
@@ -202,7 +208,7 @@ footer {
 }
 .itemGaleria .Enlaces img {
   width: var(--ihc-buttons-width-smaller);
-  height: var(--ihc-buttons-height-smaller);;
+  height: var(--ihc-buttons-height-smaller);
 }
 .itemGaleria .Enlaces div {
   display: flex;
@@ -216,7 +222,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-p{
+p {
   font-weight: bold;
   align-items: center;
 }
@@ -255,15 +261,15 @@ p{
 
 @media (max-width: 478px) {
   #TemasBtn {
-    display:none;
+    display: none;
   }
-  .imgProfile{
-    display:none;
+  .imgProfile {
+    display: none;
   }
-  header{
+  header {
     gap: var(--ihc-gap-xs);
-    margin:1px;
-    padding:var(--ihc-padding-s) var(--ihc-padding-s)
+    margin: 1px;
+    padding: var(--ihc-padding-s) var(--ihc-padding-s);
   }
 }
 
